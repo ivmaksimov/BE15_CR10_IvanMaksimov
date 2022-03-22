@@ -5,7 +5,7 @@ require_once 'file_upload.php';
 if ($_POST) {   
     $title = $_POST['title'];
     $genre = $_POST['genre'];
-    $id = $_POST['id'];
+    //$id = $_POST['id'];
     $type = $_POST['m_type'];
     $desc = $_POST['short_description'];
     $a_fname = $_POST['author_first_name'];
@@ -19,7 +19,7 @@ if ($_POST) {
     //this function exists in the service file upload.
     $picture = file_upload($_FILES['picture']);  
    
-    $sql = "INSERT INTO media (title, genre,  m_type, short_description, author_first_name, author_last_name, publisher_name, publisher_address, publish_date, ISBN, m_status, picture ) VALUES ('$title', '$genre', '$type', '$desc', '$a_fname', '$a_lname', '$p_name', '$p_address', $p_date, $isbn, '$status', '$picture->fileName')";
+    $sql = "INSERT INTO media (title, genre,  m_type, short_description, author_first_name, author_last_name, publisher_name, publisher_address, publish_date, ISBN, m_status, picture ) VALUES ('$title', '$genre', '$type', '$desc', '$a_fname', '$a_lname', '$p_name', '$p_address', '$p_date', $isbn, '$status', '$picture->fileName')";
 
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";

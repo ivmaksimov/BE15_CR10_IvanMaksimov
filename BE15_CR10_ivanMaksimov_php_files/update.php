@@ -45,69 +45,74 @@ if ($_GET['id']) {
                 height: 70px !important;
             }     
         </style>
+        <link rel="stylesheet" href="./my_files/moj.css">
     </head>
-    <body class="bg-black text-white">
+    <body class="home text-white">
         <fieldset>
-            <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture   ?>' alt="<?php echo $title ?>"></legend>
+            <legend class='h2'>Update request </legend>
+            <h2 class="text-danger"><?php echo $title ?></h2>
             <form action="actions/a_update.php"  method="post" enctype="multipart/form-data">
                 <table class="table text-white">
                     <tr>
                         <th>Title</th>
-                        <td><input class='form-control' type="text" name="title"  placeholder="Title" value="<?php echo $title ?>" /></td>
+                        <td><input  class='form-control' type="text" name="title"  value="<?php echo $title ?>" /></td>
                     </tr>    
                     <tr>
                         <th>Genre</th>
-                        <td><input class='form-control' type="text" name= "genre" placeholder="Genre" step="any" value="<?php echo $genre ?>"  /></td>
+                        <td><input class='form-control' type="text" name= "genre"  step="any" value="<?php echo $genre ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Type</th>
-                        <td><input class='form-control' type="text" name= "m_type" placeholder="Type" step="any" value="<?php echo $type ?>" /></td>
+                        <td><input class='form-control' type="text" name= "m_type"  value="<?php echo $type ?>" /></td>
                     </tr>
                     <tr>
                         <th>Short Descripton</th>
-                        <td><input class='form-control' type="text" name="short_description" placeholder="Short Descripton" value="<?php echo $desc ?>" /></td>
+                        <td><input class='form-control' type="text" name="short_description" value="<?php echo $desc ?>" /></td>
                     </tr>
                     <tr>
                         <th>Image</th>
-                        <td><input class='form-control' type="file" name="picture" value="<?php echo $picture ?>"   /></td>
+                        <td><input class='form-control' type="file" name="picture"  /></td>
                     </tr>    
                     <tr>
                         <th>Athor-First Name</th>
-                        <td><input class='form-control' type="text" name= "author_first_name" placeholder="Name" value="<?php echo $a_fname ?>"  /></td>
+                        <td><input class='form-control' type="text" name= "author_first_name"  value="<?php echo $a_fname ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Athor-Last Name</th>
-                        <td><input class='form-control' type="text" name="author_last_name" placeholder="Surname" value="<?php echo $a_lname ?>"  /></td>
+                        <td><input class='form-control' type="text" name="author_last_name" value="<?php echo $a_lname ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Publisher</th>
-                        <td><input class='form-control' type="text" name="publisher_name" placeholder="Name" value="<?php echo $p_name ?>" /></td>
+                        <td><input class='form-control' type="text" name="publisher_name"  value="<?php echo $p_name ?>" /></td>
                     </tr>
                     <tr>
                         <th>Publisher-Address</th>
-                        <td><input class='form-control' type="text" name= "publisher_address" placeholder="Address" value="<?php echo $p_address ?>"  /></td>
+                        <td><input class='form-control' type="text" name= "publisher_address"  value="<?php echo $p_address ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Publish Date</th>
-                        <td><input class='form-control' type="date" name= "publish_date" placeholder="Date" value="<?php echo $p_date ?>"  /></td>
+                        <td><input class='form-control' type="date" name= "publish_date"  value="<?php echo $p_date ?>"  /></td>
                     </tr>
                     <tr>
                         <th>ISBN</th>
-                        <td><input class='form-control' type="number" name= "ISBN" placeholder="ISBN" value="<?php echo $isbn ?>"  /></td>
+                        <td><input class='form-control' type="number" name= "ISBN"  value="<?php echo $isbn ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Status</th>
-                        <td><input class='form-control' type="text" name= "m_status"  placeholder="Status" value="<?php echo $status ?>" /></td>
+                        <td><input class='form-control' type="text" name= "m_status"   value="<?php echo $status ?>" /></td>
                     </tr>
                     <tr>
                     <tr>
                         <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
                         <input type= "hidden" name= "picture" value= "<?php echo $data['picture'] ?>" />
                         <td><button class="btn btn-success" type= "submit">Save Changes</button></td>
-                        <td><a href= "index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
+                        <td><a href= "index.php"><button class="btn btn-warning" type="button">Home</button></a></td>
+                        
                     </tr>
                 </table>
             </form>
+            
         </fieldset>
+        
     </body>
 </html>

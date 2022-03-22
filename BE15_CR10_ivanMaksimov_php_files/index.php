@@ -39,16 +39,18 @@ mysqli_close($connect);
                 height: 70px !important;
             }
             td {          
-                text-align: left;
+                text-align: center;
                 vertical-align: middle;
             }
             tr {
                 text-align: center;
             }
         </style>
+        <link rel="stylesheet" href="./my_files/moj.css">
     </head>
-    <body   class="bg-black">
-        <div class="manageProduct  text-danger w-75 mt-3">    
+    <body style="background-image: url(./my_files/dark12.jpg);
+  background-size: cover;"  >
+        <div  class="manageProduct  text-danger w-75 mt-3 ">    
             <div class='mb-3'>
                 <a  href= "create.php"><button style="padding: 1rem; width: 300px;" class='btn btn-primary'type="button" >Add New</button></a>
             </div>

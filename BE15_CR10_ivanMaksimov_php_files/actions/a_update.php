@@ -20,10 +20,10 @@ if ($_POST) {
 
     $picture = file_upload($_FILES['picture']);//file_upload() called  
     if($picture->error===0){
-        ($_POST["picture"]=="product.png")?: unlink("../pictures/$_POST[picture]");           
-        $sql = "UPDATE media SET title = '$title', genre = '$genre', m_type = '$type', short_description = '$desc', author_first_name = '$a_fname', author_last_name = '$a_lname', publisher_name = '$p_name', publisher_address = '$p_address', publish_date = $p_date, ISBN = $isbn, m_status = '$status',  picture = '$picture->fileName' WHERE id = {$id}";
+        ($_POST["picture"]=="product.png")?: unlink("./pictures/$_POST[picture]");           
+        $sql = "UPDATE media SET title = '$title', genre = '$genre', m_type = '$type', short_description = '$desc', author_first_name = '$a_fname', author_last_name = '$a_lname', publisher_name = '$p_name', publisher_address = '$p_address', publish_date = '$p_date', ISBN = $isbn, m_status = '$status',  picture = '$picture->fileName' WHERE id = {$id}";
     }else{
-        $sql = "UPDATE media SET title = '$title', genre = '$genre', m_type = '$type', short_description = '$desc', author_first_name = '$a_fname', author_last_name = '$a_lname', publisher_name = '$p_name', publisher_address = '$p_address', publish_date = $p_date, ISBN = $isbn, m_status = '$status', picture = '$picture->fileName'   WHERE id = {$id}";
+        $sql = "UPDATE media SET title = '$title', genre = '$genre', m_type = '$type', short_description = '$desc', author_first_name = '$a_fname', author_last_name = '$a_lname', publisher_name = '$p_name', publisher_address = '$p_address', publish_date = '$p_date', ISBN = $isbn, m_status = '$status' WHERE id = {$id}";
     }    
     if (mysqli_query($connect, $sql) === TRUE) {
         $class = "success";

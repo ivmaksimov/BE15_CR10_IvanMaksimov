@@ -12,8 +12,9 @@
                 width: 60% ;
             }       
         </style>
+        <link rel="stylesheet" href="./my_files/moj.css">
     </head>
-    <body class="bg-black text-white">
+    <body class="home text-white">
         <fieldset>
             <legend class='h2'>Add Media</legend>
             <form action="actions/a_create.php" method= "post" enctype="multipart/form-data">
@@ -57,7 +58,7 @@
                     </tr>
                     <tr>
                         <th>Publish Date</th>
-                        <td><input class='form-control' type="number" name= "publish_date"   /></td>
+                        <td><input class='form-control' type="date" name= "publish_date"   /></td>
                     </tr>
                     <tr>
                         <th>ISBN</th>
